@@ -1,0 +1,28 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define"
+    xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+	<f:entry title="文件名: " field="filePath">
+		<f:textbox></f:textbox>
+	</f:entry>
+
+	<f:entry title="文件内容: " field="fileContent">
+		<f:textarea></f:textarea>
+	</f:entry>
+
+	<f:entry title="操作方式: " field="fileOption">
+		<f:entry>
+			<f:radio name="fileOption" title="Insert at start of file"
+				value="insertAtStart" checked="${instance.fileOption == 'insertAtStart'}" />
+		</f:entry>
+		<f:entry>
+			<f:radio name="fileOption" title="Append to end of file"
+				value="appendToEnd" checked="${instance.fileOption == 'appendToEnd'}" />
+		</f:entry>
+		<f:entry>
+			<f:radio name="fileOption" title="Overwrite file"
+				value="overWrite" checked="${instance.fileOption == 'overWrite'}" />
+		</f:entry>
+	</f:entry>
+
+</j:jelly>

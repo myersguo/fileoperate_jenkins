@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  这个插件负责拉取更新文件。
+</div>
